@@ -6,8 +6,9 @@
           {% trans "Wordplease's blogs" %}
           <small>
               {% blocktrans with count=object_list|length %}
-                  ({{ count }} and counting)
+                 ({{ count }}
               {% endblocktrans %}
+              {% trans "and counting" %})
           </small>
       </h1>
     </div>

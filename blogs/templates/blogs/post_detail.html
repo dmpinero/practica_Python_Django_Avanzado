@@ -9,7 +9,10 @@
     {% endif %}
     <div class="well well-sm">
         {% trans "Published in" %}
-        {{ object.categories.all|join:", " }}
+        {% for category in post.categories.all %}
+            {{ category.name }},
+        {% endfor %}
+
         {% trans "on" %}
         {{ object.publish_date|localize }}
     </div>

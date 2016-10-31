@@ -1,0 +1,208 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-10-31 07:38+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: blogs/templates/blogs/blog_list.html:6
+msgid "Wordplease's blogs"
+msgstr ""
+
+#: blogs/templates/blogs/blog_list.html:8
+#: blogs/templates/blogs/latest_posts.html:8
+#, python-format
+msgid ""
+"\n"
+"                 (%(count)s\n"
+"              "
+msgstr ""
+
+#: blogs/templates/blogs/blog_list.html:11
+#: blogs/templates/blogs/latest_posts.html:11
+msgid "and counting"
+msgstr "and counting"
+
+#: blogs/templates/blogs/blog_list.html:37
+msgid "No blogs here"
+msgstr "No blogs here"
+
+#: blogs/templates/blogs/blog_list.html:38
+msgid "We are sorry, but nobody has a blog here."
+msgstr "We are sorry, but nobody has a blog here."
+
+#: blogs/templates/blogs/includes/categories_list.html:2
+msgid "Categories"
+msgstr "Categories"
+
+#: blogs/templates/blogs/includes/post_list.html:24
+msgid "No posts here"
+msgstr "No posts here"
+
+#: blogs/templates/blogs/includes/post_list.html:25
+msgid "We are sorry, but nobody has published any post yet."
+msgstr "We are sorry, but nobody has published any post yet."
+
+#: blogs/templates/blogs/latest_posts.html:6
+msgid "Latest posts"
+msgstr "Latest posts"
+
+#: blogs/templates/blogs/new_post.html:5
+msgid "New post"
+msgstr "New post"
+
+#: blogs/templates/blogs/new_post.html:10
+msgid "Save new post"
+msgstr "Save new post"
+
+#: blogs/templates/blogs/post_detail.html:11
+msgid "Published in"
+msgstr "Published in"
+
+#: blogs/templates/blogs/post_detail.html:16
+msgid "on"
+msgstr "on"
+
+#: practica_Python_Django_Avanzado/templates/base.html:8
+msgid "Wordplease: the politest blog platform"
+msgstr "Wordplease: the politest blog platform"
+
+#: practica_Python_Django_Avanzado/templates/base.html:20
+msgid "Toggle navigation"
+msgstr "Toggle navigation"
+
+#: practica_Python_Django_Avanzado/templates/base.html:25
+#: practica_Python_Django_Avanzado/templates/base.html:57
+msgid "Wordplease"
+msgstr "Wordplease"
+
+#: practica_Python_Django_Avanzado/templates/base.html:29
+msgid "Home"
+msgstr "Home"
+
+#: practica_Python_Django_Avanzado/templates/base.html:30
+msgid "Blogs"
+msgstr "Blogs"
+
+#: practica_Python_Django_Avanzado/templates/base.html:34
+msgid "New Post"
+msgstr "New Post"
+
+#: practica_Python_Django_Avanzado/templates/base.html:35
+msgid "My blog"
+msgstr "My blog"
+
+#: practica_Python_Django_Avanzado/templates/base.html:36
+#: users/templates/users/profile.html:6
+msgid "My profile"
+msgstr "My profile"
+
+#: practica_Python_Django_Avanzado/templates/base.html:37
+msgid "Logout"
+msgstr "Logout"
+
+#: practica_Python_Django_Avanzado/templates/base.html:39
+#: users/templates/users/signup.html:14
+msgid "Signup"
+msgstr "Signup"
+
+#: practica_Python_Django_Avanzado/templates/base.html:40
+#: users/templates/users/login.html:14
+msgid "Login"
+msgstr "Login"
+
+#: users/forms.py:11 users/forms.py:31
+msgid "Username"
+msgstr "Username"
+
+#: users/forms.py:12 users/forms.py:38
+msgid "Password"
+msgstr "Password"
+
+#: users/forms.py:20
+msgid "Wrong username or password"
+msgstr "Wrong username or password"
+
+#: users/forms.py:27
+msgid "First name"
+msgstr "First name"
+
+#: users/forms.py:28
+msgid "Last name"
+msgstr "Last name"
+
+#: users/forms.py:29
+msgid "E-mail"
+msgstr "E-mail"
+
+#: users/forms.py:32 users/forms.py:35
+msgid "Required. 30 characters or fewer. Letters, digits and @/./+/-/_ only."
+msgstr "Required. 30 characters or fewer. Letters, digits and @/./+/-/_ only."
+
+#: users/forms.py:39
+msgid "Confirm your password"
+msgstr "Confirm your password"
+
+#: users/forms.py:40
+msgid "Blog name"
+msgstr "Blog name"
+
+#: users/forms.py:41
+msgid "Blog description"
+msgstr "Blog description"
+
+#: users/forms.py:48
+msgid "Username already exists"
+msgstr "Username already exists"
+
+#: users/forms.py:51
+msgid "Passwords don't match"
+msgstr "Passwords don't match"
+
+#: users/templates/users/login.html:6
+msgid "Login into Wordplease"
+msgstr "Login into Wordplease"
+
+#: users/templates/users/profile.html:14
+msgid "Update profile"
+msgstr "Update profile"
+
+#: users/templates/users/profile_updated.html:5
+msgid "Profile updated!"
+msgstr "Profile updated!"
+
+#: users/templates/users/profile_updated.html:6
+msgid "Your profile data has been updated successfully"
+msgstr "Your profile data has been updated successfully"
+
+#: users/templates/users/profile_updated.html:8
+msgid "Back to my profile"
+msgstr "Back to my profile"
+
+#: users/templates/users/signup.html:6
+msgid "Signup into Wordplease"
+msgstr "Signup into Wordplease"
+
+#: users/templates/users/signup_successful.html:5
+msgid "Your welcome!"
+msgstr "Your welcome!"
+
+#: users/templates/users/signup_successful.html:6
+msgid "Thank you to signup into Wordplease. "
+msgstr "Thank you to signup into Wordplease. "
+
+#: users/templates/users/signup_successful.html:8
+msgid "Login now"
+msgstr "Login now"
