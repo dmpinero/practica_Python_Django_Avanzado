@@ -2,7 +2,7 @@
 
 Modificaciones de Wordplease, plataforma de blogging para aprender técnicas avanzadas de Django.
 
-![Matrix_Kung_Fu](http://media.giphy.com/media/AoSMPAREugAAo/giphy.gif)
+![Matrix_Kung_Fu](http://media.giphy.com/media/vEcyRJ5yysqk/giphy.gif)
 
 ## Índice
 
