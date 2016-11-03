@@ -3,7 +3,6 @@ from rest_framework.viewsets import ModelViewSet
 
 from fotos.serializer import FotoSerializer
 from fotos.models import Foto
-from fotos.util import generate_responsive_images
 
 
 class FotoViewSet(ModelViewSet):
@@ -14,9 +13,7 @@ class FotoViewSet(ModelViewSet):
 
     # Al crear o actualizar una foto el propietario será el usuario autenticado
     def perform_create(self, serializer):
-        foto = serializer.save(owner=self.request.user)
-        generate_responsive_images(foto)
+        serializer.save(owner=self.request.user)
 
     def perform_update(self, serializer):
-        foto = serializer.save(owner=self.request.user)
-        generate_responsive_images(foto)
+        serializer.save(owner=self.request.user)
