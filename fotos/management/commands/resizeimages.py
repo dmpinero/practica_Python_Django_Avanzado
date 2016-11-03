@@ -13,6 +13,4 @@ class Command(BaseCommand):
         for foto in fotos:
             self.stdout.write("Resizing photo {0} image".format(foto.pk))
             generate_responsive_images(foto)
-            foto.image_resized = True  # Marcar imagen como ya procesada
-            foto.save()                # Guardar foto
             self.stdout.write(self.style.SUCCESS("Photo {0}'s image resized successfully".format(foto.pk)))

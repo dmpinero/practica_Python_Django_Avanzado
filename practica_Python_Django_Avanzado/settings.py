@@ -114,7 +114,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 # Celery
 USE_CELERY = True
-BROKER_URL = 'django://'
+BROKER_URL = 'django://'  # Utiliza Kombu como cola de tareas
 
 # Media URL
 THUMBNAIL_HIGH_RESOLUTION = True

@@ -7,6 +7,8 @@ Modificaciones de Wordplease, plataforma de blogging para aprender técnicas ava
 ## Índice
 
 * [Instalación](#toc_2)
+* [Arranque de la app](#toc_3)
+* [Message Broker y Workers](#toc_4)
 
 ## Instalación
 Para poner en marcha la plataforma se deberán seguir los siguientes pasos
@@ -50,7 +52,9 @@ Para poder crear datos en las distintas entidades de la aplicación debe crearse
 (env)$ python manage.py createsuperuser
 ```
 
-### Arrancar el servidor
+## Arranque de la app
+
+### Arrancar el servidor Web
 Para arrancar el servidor, hay que *activar el entorno virtual* y luego *arrancar el servidor* de desarrollo de Django.
 
 Desde la carpeta del proyecto y en el terminal, ejecuta:
@@ -62,4 +66,25 @@ $ source env/bin/activate
 
 ### Acceso a interfaz de administración de la aplicación
 Acceder a la URL http://127.0.0.1:8000/admin/login, proporcionando los datos de acceso del usuario creado en el apartado _Crear usuario de acceo a la interfaz de administración de la aplicación_
- 
+
+## Message Broker y Workers
+### Kombu (Message Broker o cola de tareas. Kombu transport using the Django database as a message store)
+Se instala como app de Django (settings.py)
+INSTALLED_APPS = ( 
+    ... 
+    'kombu.transport.django',
+     ...
+)
+
+BROKER_URL = 'django://' # Indica que el Broker es Kombu
+
+### Celery (Worker. servicio de procesamiento en background)
+
+Para arrancar Celery, hay que *activar el entorno virtual* y luego *arrancar el Celery*.
+
+Desde la carpeta del proyecto y en el terminal, ejecuta:
+
+```
+$ source env/bin/activate
+(env)$ celery -A wordplease worker -l info
+```
