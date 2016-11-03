@@ -91,7 +91,7 @@ INSTALLED_APPS = (
     'kombu.transport.django', # Esta línea se elimina
 )
 
-BROKER_URL = 'amqp://guest@localhost'  # Utiliza RabbitMQ como cola de tareas (Message broker)
+BROKER_URL = 'amqp://guest:guest@localhost:5672//' # Utiliza RabbitMQ como cola de tareas (Message broker)
 
 [...]
 ```
