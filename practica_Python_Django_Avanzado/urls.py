@@ -4,6 +4,7 @@ from django.contrib import admin
 from blogs import urls as blogs_urls, api_urls as blogs_api_urls
 from django.conf.urls.static import static
 from users import urls as users_urls, api_urls as users_api_urls
+from fotos import api_urls as fotos_api_urls
 from files import api_urls as files_api_urls
 
 urlpatterns = [
@@ -19,5 +20,6 @@ urlpatterns = [
     # API URLs
     url(r'^api/', include(blogs_api_urls)),
     url(r'^api/', include(users_api_urls)),
-    url(r'^api/', include(files_api_urls))
+    url(r'^api/', include(files_api_urls)),
+    url(r'^api/', include(fotos_api_urls))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)  # support for media files

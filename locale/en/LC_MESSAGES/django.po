@@ -206,3 +206,18 @@ msgstr "Thank you to signup into Wordplease. "
 #: users/templates/users/signup_successful.html:8
 msgid "Login now"
 msgstr "Login now"
+
+msgid "Title"
+msgstr "Title"
+
+msgid "Intro"
+msgstr "Intro"
+
+msgid "Body"
+msgstr "Body"
+
+msgid "Image url"
+msgstr "Image url"
+
+msgid "Publish date"
+msgstr "Publish date"

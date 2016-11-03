@@ -6,6 +6,7 @@ from django.db import models
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.utils import timezone
+from django.utils.translation import ugettext_lazy as _
 
 from .tasks import download_resize_update_photo_image
 from .settings import DOWNLOAD_IMAGES
@@ -16,7 +17,7 @@ class Category(models.Model):
     name = models.CharField(max_length=250, primary_key=True)
 
     class Meta:
-        verbose_name_plural = "categories"
+        verbose_name_plural = _("categories")
 
     def __unicode__(self):
         return self.name
@@ -41,12 +42,12 @@ class Blog(models.Model):
 
 class Post(models.Model):
     blog = models.ForeignKey(Blog, related_name="posts")  # Allows access to posts from Blogs.posts instead of Blogs.post_set
-    title = models.CharField(max_length=250)
-    intro = models.TextField(max_length=250)
-    body = models.TextField()
-    image_url = models.URLField(blank=True, null=True)
-    publish_date = models.DateTimeField(default=timezone.now)  # Sets automatically the time to now, by let us to modify the value if we want
-    categories = models.ManyToManyField(Category, related_name="posts")  # Allows access to posts from Category.posts instead of Blogs.category_set
+    title = models.CharField(verbose_name=_('Title'),max_length=250)
+    intro = models.TextField(verbose_name=_('Intro'), max_length=250)
+    body = models.TextField(verbose_name=_('Body'))
+    image_url = models.URLField(verbose_name=_('Image url'), blank=True, null=True)
+    publish_date = models.DateTimeField(verbose_name=_('Publish date'), default=timezone.now)  # Sets automatically the time to now, by let us to modify the value if we want
+    categories = models.ManyToManyField(Category, verbose_name=_('Categories'), related_name="posts")  # Allows access to posts from Category.posts instead of Blogs.category_set
 
     def get_absolute_url(self):
         """

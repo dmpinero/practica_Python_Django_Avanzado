@@ -5,6 +5,8 @@ from django.db.models import Count
 from django.shortcuts import get_object_or_404
 from django.utils.datetime_safe import datetime
 from django.views.generic import ListView, DetailView, CreateView
+from django.utils import translation
+
 from .models import Post, Blog, Category
 
 
@@ -45,6 +47,16 @@ class PostDetail(PostQueryset, DetailView):
 
 
 class PostList(PostQueryset, ListView):
+    #TODO: Falta por implementar traducción de la página actual
+    """
+    forced_language = request.GET.get('lang')
+    if forced_language:
+        request.session['lang'] = forced_language
+
+    session_language = request.session.get('lang')
+    if session_language:
+        translation.activate(session_language)
+    """
     template_name = 'blogs/latest_posts.html'
     paginate_by = 12
 

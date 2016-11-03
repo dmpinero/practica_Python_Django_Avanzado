@@ -4,7 +4,6 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
-#TODO. Ver por qué no traduce los textos de los formularios
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -211,3 +210,18 @@ msgstr "Gracias por darse de alta en Wordplease. "
 #: users/templates/users/signup_successful.html:8
 msgid "Login now"
 msgstr "Entrar ahora"
+
+msgid "Title"
+msgstr "Título"
+
+msgid "Intro"
+msgstr "Resumen"
+
+msgid "Body"
+msgstr "Cuerpo"
+
+msgid "Image url"
+msgstr "URL de la imagen"
+
+msgid "Publish date"
+msgstr "Fecha de publicación"

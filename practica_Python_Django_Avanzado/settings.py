@@ -30,6 +30,8 @@ INSTALLED_APPS = (
     'blogs',
     'users',
     'files',
+    'fotos',
+    'easy_thumbnails',
     'kombu.transport.django',
 )
 
@@ -113,3 +115,26 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 # Celery
 USE_CELERY = True
 BROKER_URL = 'django://'
+
+# Media URL
+THUMBNAIL_HIGH_RESOLUTION = True
+# Tamaño de los distintas imágenes para los dispositivos móviles
+
+# Establece a 3600 puntos el alto y ancho de la imagen máxima
+DEFAULT_IMAGE_SIZE = (3600, 3600)
+# Establece opciones de las imágenes (ancho y alto a 3600 puntos. Se recorta (crop)
+DEFAULT_IMAGE_OPTIONS = {'size': DEFAULT_IMAGE_SIZE, 'crop': True}
+# Nombre de los archivos generados
+THUMBNAIL_NAMER = 'easy_thumbnails.namers.alias'
+# Tamaño de los distintas imágenes para los dispositivos móviles
+THUMBNAIL_ALIASES = {
+    '': {
+        'iphone6_7': {'size': (375, 375), 'crop': True},
+        'iphone6s_plus': {'size': (414, 414), 'crop': True},
+        'iphone5': {'size': (320, 320), 'crop': True},
+        'samsung': {'size': (360, 320), 'crop': True},
+        'ipad': {'size': (1024, 1024), 'crop': True},
+        'ipad2': {'size': (768, 768), 'crop': True},
+        'samsung_galaxy': {'size': (800, 800), 'crop': True},
+    },
+}
