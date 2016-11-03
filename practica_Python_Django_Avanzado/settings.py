@@ -32,7 +32,6 @@ INSTALLED_APPS = (
     'files',
     'fotos',
     'easy_thumbnails',
-    'kombu.transport.django',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -114,7 +113,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 # Celery
 USE_CELERY = True
-BROKER_URL = 'django://'  # Utiliza Kombu como cola de tareas
+BROKER_URL = 'amqp://guest:guest@localhost:5672//' # Utiliza RabbitMQ como cola de tareas (Message broker)
 
 # Media URL
 THUMBNAIL_HIGH_RESOLUTION = True

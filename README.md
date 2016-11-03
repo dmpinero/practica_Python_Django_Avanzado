@@ -82,9 +82,30 @@ BROKER_URL = 'django://' # Indica que el Broker es Kombu
 [...]
 ```
 
-#### Decoramos la función que queremos que se ejecute en celery
+### Para producción se suele utilizar como brokers [RabbitMQ](https://www.rabbitmq.com) o [Redis](http://redis.io).
+Eliminar Kombu de las aplicaciones instaladas en Django y se configura el broker para que sea amqp
+```python
+[...]
+INSTALLED_APPS = (
+    ...
+    'kombu.transport.django', # Esta línea se elimina
+)
 
-Para que un código se ejecute en  **[Celery](http://www.celeryproject.org/)**, tan sólo debemos decorar la función con el decorador ```@ shared_task ```. 
+BROKER_URL = 'amqp://guest@localhost'  # Utiliza RabbitMQ como cola de tareas (Message broker)
+
+[...]
+```
+
+
+Para arrancar rabbitmq se utiliza el comando
+```python
+rabbitmq-server (ubicado en la carpeta sbin)
+```
+
+Para parar rabbitmq se utiliza el comando
+```python
+rabbitmqctl stop
+```
 
 ### Celery (Worker. servicio de procesamiento en background)
 
@@ -95,4 +116,14 @@ Desde la carpeta del proyecto y en el terminal, ejecuta:
 ```
 $ source env/bin/activate
 (env)$ celery -A wordplease worker -l info
+```
+
+En el archivo settings.py
+```python
+USE_CELERY = True
+
+#### Decoramos la función que queremos que se ejecute en celery
+
+Para que un código se ejecute en  **[Celery](http://www.celeryproject.org/)**, tan sólo debemos decorar la función con el decorador ```@ shared_task ```. 
+
 ```
