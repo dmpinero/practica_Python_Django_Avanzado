@@ -70,13 +70,21 @@ Acceder a la URL http://127.0.0.1:8000/admin/login, proporcionando los datos de 
 ## Message Broker y Workers
 ### Kombu (Message Broker o cola de tareas. Kombu transport using the Django database as a message store)
 Se instala como app de Django (settings.py)
-INSTALLED_APPS = ( 
-    ... 
+```python
+[...]
+INSTALLED_APPS = (
+    ...
     'kombu.transport.django',
-     ...
 )
 
 BROKER_URL = 'django://' # Indica que el Broker es Kombu
+
+[...]
+```
+
+#### Decoramos la función que queremos que se ejecute en celery
+
+Para que un código se ejecute en  **[Celery](http://www.celeryproject.org/)**, tan sólo debemos decorar la función con el decorador ```@ shared_task ```. 
 
 ### Celery (Worker. servicio de procesamiento en background)
 
