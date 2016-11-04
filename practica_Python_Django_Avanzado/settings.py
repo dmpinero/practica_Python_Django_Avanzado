@@ -1,5 +1,6 @@
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+import datetime
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -103,7 +104,9 @@ STATIC_URL = '/static/'
 LOGIN_URL = '/login/'
 
 REST_FRAMEWORK = {
-    'PAGE_SIZE': 100
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+    ),
 }
 
 # To serve uploaded files
@@ -136,4 +139,10 @@ THUMBNAIL_ALIASES = {
         'ipad2': {'size': (768, 768), 'crop': True},
         'samsung_galaxy': {'size': (800, 800), 'crop': True},
     },
+}
+
+# Autenticación por JWT
+JWT_AUTH = {
+    'JWT_ALLOW_REFRESH': True, # Permitir refrescar token JWT
+    'JWT_EXPIRATION_DELTA': datetime.timedelta(seconds=300),  # Expiración del token en 5 minutos
 }

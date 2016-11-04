@@ -9,6 +9,7 @@ Modificaciones de Wordplease, plataforma de blogging para aprender técnicas ava
 * [Instalación](#toc_2)
 * [Arranque de la app](#toc_3)
 * [Message Broker y Workers](#toc_4)
+* [Autenticación del API basada en tokens](#toc_5)
 
 ## Instalación
 Para poner en marcha la plataforma se deberán seguir los siguientes pasos
@@ -121,9 +122,46 @@ $ source env/bin/activate
 En el archivo settings.py
 ```python
 USE_CELERY = True
-
+```
 #### Decoramos la función que queremos que se ejecute en celery
-
 Para que un código se ejecute en  **[Celery](http://www.celeryproject.org/)**, tan sólo debemos decorar la función con el decorador ```@ shared_task ```. 
 
+## Autenticación del API basada en tokens
+### Configuración de JWT
+En el módulo settings.py incluir el código que permita la autenticación por JWT
+```python
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+    ),
+}
 ```
+
+Incluir en el archivo **settings.py** la configuración para permitir refrescar tokens y establecer la expiración del token en 5 minutos
+```python
+JWT_AUTH = {
+    'JWT_ALLOW_REFRESH': True, # Permitir refrescar token JWT
+    'JWT_EXPIRATION_DELTA': datetime.timedelta(seconds=300),  # Expiración del token en 5 minutos
+}
+```
+
+Añadir endpoints en el archivo **urls.py**
+```python
+    # Autenticación con JWT
+    url(r'^api/token-auth/', obtain_jwt_token),     # Obtener token
+    url(r'^api/token-refresh/', refresh_jwt_token), # Refrescar token
+    url(r'^api/token-verify/', verify_jwt_token),   # Verificar token
+```
+
+### Endpoints
+Autenticación
+http://localhost:8000/api/token-auth/
+
+Refresco de token
+http://localhost:8000/api/token-refresh/
+
+Verificación de token
+http://localhost:8000/api/token-verify/
+
+API de obtención de fotos (autenticación por JWT)
+http://127.0.0.1:8000/api/fotos/
