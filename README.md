@@ -127,6 +127,10 @@ USE_CELERY = True
 Para que un código se ejecute en  **[Celery](http://www.celeryproject.org/)**, tan sólo debemos decorar la función con el decorador ```@ shared_task ```. 
 
 ## Autenticación del API basada en tokens
+Instalación de JWT (Para ver todos los pasos a seguir se recomienda visitar https://getblimp.github.io/django-rest-framework-jwt/)
+```
+(env)$ pip install djangorestframework-jwt
+```
 ### Configuración de JWT
 En el módulo settings.py incluir el código que permita la autenticación por JWT
 ```python
