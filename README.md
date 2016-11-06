@@ -10,6 +10,7 @@ Modificaciones de Wordplease, plataforma de blogging para aprender técnicas ava
 * [Arranque de la app](#toc_3)
 * [Message Broker y Workers](#toc_4)
 * [Autenticación del API basada en tokens](#toc_5)
+* [Integración con terceros (oAuth2)](#toc_6)
 
 ## Instalación
 Para poner en marcha la plataforma se deberán seguir los siguientes pasos
