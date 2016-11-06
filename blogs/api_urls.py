@@ -8,5 +8,5 @@ router.register('blogs', BlogsViewSet)
 router.register('posts', PostsViewSet)
 
 urlpatterns = (
-    url(r'^1.0/', include(router.urls)),
+    url(r'^fotos/', include(router.urls)),
 )

@@ -33,6 +33,7 @@ INSTALLED_APPS = (
     'files',
     'fotos',
     'easy_thumbnails',
+    'oauth2_provider',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -106,6 +107,7 @@ LOGIN_URL = '/login/'
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+        'oauth2_provider.ext.rest_framework.OAuth2Authentication',       # Permitir autenticación por oAuth2
     ),
 }
 

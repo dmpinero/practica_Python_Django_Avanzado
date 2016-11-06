@@ -28,6 +28,7 @@
                 <ul class="nav navbar-nav">
                     <li><a href="{% url 'latest_posts' %}">{% trans "Home" %}</a></li>
                     <li><a href="{% url 'blog_list' %}">{% trans "Blogs" %}</a></li>
+                    <li><a href="http://127.0.0.1:8000/oauth/applications/register/">Registro aplicaciones de terceros</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     {% if user.is_authenticated %}

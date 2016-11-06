@@ -167,5 +167,56 @@ http://localhost:8000/api/token-refresh/
 Verificación de token
 http://localhost:8000/api/token-verify/
 
-API de obtención de fotos (autenticación por JWT)
-http://127.0.0.1:8000/api/fotos/
+API de subida de fotos (autenticación por JWT)
+http://127.0.0.1:8000/api/1.0/fotos/ (Método POST)
+
+
+## Integración con terceros
+Instalación de django-oauth-toolkit (Para ver todos los pasos a seguir se recomienda visitar https://github.com/evonove/django-oauth-toolkit)
+```
+(env)$ pip install django-oauth-toolkit
+```
+
+Añadir oauth2_provider a la lista de aplicaciones instaladas (INSTALLED_APPS) en el archivo **settings.py**
+```python
+   INSTALLED_APPS = (
+    ...
+    'oauth2_provider',
+   )
+```
+
+Añadir oauth2 como mecanismo de autenticación  en el archivo **settings.py**
+```python
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        ...
+        'oauth2_provider.ext.rest_framework.OAuth2Authentication',       # Permitir autenticación por oAuth2
+    ),
+}
+```
+
+Añadir endpoints en el archivo **urls.py**
+```python
+urlpatterns = patterns(
+    ...
+    url(r'^oauth/', include('oauth2_provider.urls', namespace='oauth2_provider')),
+)
+```
+
+Ejecutar migraciones
+```python
+(env)$ python manage.py migrate
+```
+
+Tras ejecutar las migraciones se crean las siguientes tablas en la base de datos
+![Modelo de datos oauth2](docs/oauth2.png)
+
+Y las siguientes entidades en el administrador
+![Modelo de datos oauth2 admin Django](docs/oauth2_admin.png)
+
+### Endpoints
+Obtención de tokens de acceso
+http://localhost:8000/oauth/token/
+
+Alta de clientes en servidor de autorización (cuyo rol lo realiza Wordplease)
+http://127.0.0.1:8000/oauth/applications/

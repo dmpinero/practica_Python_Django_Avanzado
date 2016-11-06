@@ -30,4 +30,7 @@ urlpatterns = [
     url(r'^api/token-refresh/', refresh_jwt_token), # Refrescar token
     url(r'^api/token-verify/', verify_jwt_token),   # Verificar token
 
+    # Autenticación por oAuth2
+    url(r'^oauth/', include('oauth2_provider.urls', namespace='oauth2_provider')),
+
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)  # support for media files
