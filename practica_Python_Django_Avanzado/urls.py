@@ -5,9 +5,11 @@ from rest_framework_jwt.views import obtain_jwt_token, refresh_jwt_token, verify
 
 from blogs import urls as blogs_urls, api_urls as blogs_api_urls
 from django.conf.urls.static import static
+
 from users import urls as users_urls, api_urls as users_api_urls
 from fotos import api_urls as fotos_api_urls
 from files import api_urls as files_api_urls
+from integracion_terceros import views as int_terc_view
 
 urlpatterns = [
     # Django admin URLs
@@ -32,5 +34,9 @@ urlpatterns = [
 
     # Autenticación por oAuth2
     url(r'^oauth/', include('oauth2_provider.urls', namespace='oauth2_provider')),
+
+    # Integración con terceros
+    url(r'^autorizarAcceso/(?P<client_id>[a-zA-Z0-9_]+)/', int_terc_view.autorizarAcceso, name="autorizar_acceso"),
+    url(r'^integracion_terceros/autorizacion/', int_terc_view.obtenerAuthCode)
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)  # support for media files

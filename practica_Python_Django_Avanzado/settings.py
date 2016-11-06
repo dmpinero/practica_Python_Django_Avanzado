@@ -32,6 +32,7 @@ INSTALLED_APPS = (
     'users',
     'files',
     'fotos',
+    'integracion_terceros',
     'easy_thumbnails',
     'oauth2_provider',
 )

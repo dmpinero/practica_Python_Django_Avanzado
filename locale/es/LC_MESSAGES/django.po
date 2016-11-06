@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-31 07:38+0000\n"
+"POT-Creation-Date: 2016-11-06 11:03+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,36 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: blogs/models.py:20
+#, fuzzy
+#| msgid "Categories"
+msgid "categories"
+msgstr "Categorías"
+
+#: blogs/models.py:45
+msgid "Title"
+msgstr "Título"
+
+#: blogs/models.py:46
+msgid "Intro"
+msgstr "Resumen"
+
+#: blogs/models.py:47
+msgid "Body"
+msgstr "Cuerpo"
+
+#: blogs/models.py:48
+msgid "Image url"
+msgstr "URL de la imagen"
+
+#: blogs/models.py:49
+msgid "Publish date"
+msgstr "Fecha de publicación"
+
+#: blogs/models.py:50 blogs/templates/blogs/includes/categories_list.html:2
+msgid "Categories"
+msgstr "Categorías"
 
 #: blogs/templates/blogs/blog_list.html:6
 msgid "Wordplease's blogs"
@@ -46,10 +76,6 @@ msgstr "No hay blogs disponibles"
 #: blogs/templates/blogs/blog_list.html:38
 msgid "We are sorry, but nobody has a blog here."
 msgstr "Lo sentimos, nadie tiene un blog aquí."
-
-#: blogs/templates/blogs/includes/categories_list.html:2
-msgid "Categories"
-msgstr "Categorías"
 
 #: blogs/templates/blogs/includes/post_list.html:24
 msgid "No posts here"
@@ -88,7 +114,7 @@ msgid "Toggle navigation"
 msgstr "Cambiar modo de navegación"
 
 #: practica_Python_Django_Avanzado/templates/base.html:25
-#: practica_Python_Django_Avanzado/templates/base.html:57
+#: practica_Python_Django_Avanzado/templates/base.html:61
 msgid "Wordplease"
 msgstr ""
 
@@ -100,29 +126,37 @@ msgstr "Wordplease"
 msgid "Blogs"
 msgstr "Blogs"
 
-#: practica_Python_Django_Avanzado/templates/base.html:34
+#: practica_Python_Django_Avanzado/templates/base.html:31
+msgid "Register third party apps"
+msgstr "Registrar aplicaciones de terceros"
+
+#: practica_Python_Django_Avanzado/templates/base.html:33
+msgid "Authorize access"
+msgstr "Autorizar acceso"
+
+#: practica_Python_Django_Avanzado/templates/base.html:38
 msgid "New Post"
 msgstr "Nuevo mensaje"
 
-#: practica_Python_Django_Avanzado/templates/base.html:35
+#: practica_Python_Django_Avanzado/templates/base.html:39
 msgid "My blog"
 msgstr "Mi blog"
 
-#: practica_Python_Django_Avanzado/templates/base.html:36
+#: practica_Python_Django_Avanzado/templates/base.html:40
 #: users/templates/users/profile.html:6
 msgid "My profile"
 msgstr "Mi perfil"
 
-#: practica_Python_Django_Avanzado/templates/base.html:37
+#: practica_Python_Django_Avanzado/templates/base.html:41
 msgid "Logout"
 msgstr "Salir"
 
-#: practica_Python_Django_Avanzado/templates/base.html:39
+#: practica_Python_Django_Avanzado/templates/base.html:43
 #: users/templates/users/signup.html:14
 msgid "Signup"
 msgstr "Alta de usuario"
 
-#: practica_Python_Django_Avanzado/templates/base.html:40
+#: practica_Python_Django_Avanzado/templates/base.html:44
 #: users/templates/users/login.html:14
 msgid "Login"
 msgstr "Acceder"
@@ -153,7 +187,9 @@ msgstr "Correo electrónico"
 
 #: users/forms.py:32 users/forms.py:35
 msgid "Required. 30 characters or fewer. Letters, digits and @/./+/-/_ only."
-msgstr "Requerido. Como máximo 30 caracteres. Permitidas letras, dígitos y los símbolos @/./+/-/_"
+msgstr ""
+"Requerido. Como máximo 30 caracteres. Permitidas letras, dígitos y los "
+"símbolos @/./+/-/_"
 
 #: users/forms.py:39
 msgid "Confirm your password"
@@ -210,18 +246,3 @@ msgstr "Gracias por darse de alta en Wordplease. "
 #: users/templates/users/signup_successful.html:8
 msgid "Login now"
 msgstr "Entrar ahora"
-
-msgid "Title"
-msgstr "Título"
-
-msgid "Intro"
-msgstr "Resumen"
-
-msgid "Body"
-msgstr "Cuerpo"
-
-msgid "Image url"
-msgstr "URL de la imagen"
-
-msgid "Publish date"
-msgstr "Fecha de publicación"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-31 07:38+0000\n"
+"POT-Creation-Date: 2016-11-06 11:03+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,34 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#: blogs/models.py:20
+msgid "categories"
+msgstr "categories"
+
+#: blogs/models.py:45
+msgid "Title"
+msgstr "Title"
+
+#: blogs/models.py:46
+msgid "Intro"
+msgstr "Intro"
+
+#: blogs/models.py:47
+msgid "Body"
+msgstr "Body"
+
+#: blogs/models.py:48
+msgid "Image url"
+msgstr "Image url"
+
+#: blogs/models.py:49
+msgid "Publish date"
+msgstr "Publish date"
+
+#: blogs/models.py:50 blogs/templates/blogs/includes/categories_list.html:2
+msgid "Categories"
+msgstr "Categories"
 
 #: blogs/templates/blogs/blog_list.html:6
 msgid "Wordplease's blogs"
@@ -42,10 +70,6 @@ msgstr "No blogs here"
 #: blogs/templates/blogs/blog_list.html:38
 msgid "We are sorry, but nobody has a blog here."
 msgstr "We are sorry, but nobody has a blog here."
-
-#: blogs/templates/blogs/includes/categories_list.html:2
-msgid "Categories"
-msgstr "Categories"
 
 #: blogs/templates/blogs/includes/post_list.html:24
 msgid "No posts here"
@@ -84,7 +108,7 @@ msgid "Toggle navigation"
 msgstr "Toggle navigation"
 
 #: practica_Python_Django_Avanzado/templates/base.html:25
-#: practica_Python_Django_Avanzado/templates/base.html:57
+#: practica_Python_Django_Avanzado/templates/base.html:61
 msgid "Wordplease"
 msgstr "Wordplease"
 
@@ -96,29 +120,37 @@ msgstr "Home"
 msgid "Blogs"
 msgstr "Blogs"
 
-#: practica_Python_Django_Avanzado/templates/base.html:34
+#: practica_Python_Django_Avanzado/templates/base.html:31
+msgid "Register third party apps"
+msgstr "Register third party apps"
+
+#: practica_Python_Django_Avanzado/templates/base.html:33
+msgid "Authorize access"
+msgstr "Authorize access"
+
+#: practica_Python_Django_Avanzado/templates/base.html:38
 msgid "New Post"
 msgstr "New Post"
 
-#: practica_Python_Django_Avanzado/templates/base.html:35
+#: practica_Python_Django_Avanzado/templates/base.html:39
 msgid "My blog"
 msgstr "My blog"
 
-#: practica_Python_Django_Avanzado/templates/base.html:36
+#: practica_Python_Django_Avanzado/templates/base.html:40
 #: users/templates/users/profile.html:6
 msgid "My profile"
 msgstr "My profile"
 
-#: practica_Python_Django_Avanzado/templates/base.html:37
+#: practica_Python_Django_Avanzado/templates/base.html:41
 msgid "Logout"
 msgstr "Logout"
 
-#: practica_Python_Django_Avanzado/templates/base.html:39
+#: practica_Python_Django_Avanzado/templates/base.html:43
 #: users/templates/users/signup.html:14
 msgid "Signup"
 msgstr "Signup"
 
-#: practica_Python_Django_Avanzado/templates/base.html:40
+#: practica_Python_Django_Avanzado/templates/base.html:44
 #: users/templates/users/login.html:14
 msgid "Login"
 msgstr "Login"
@@ -206,18 +238,3 @@ msgstr "Thank you to signup into Wordplease. "
 #: users/templates/users/signup_successful.html:8
 msgid "Login now"
 msgstr "Login now"
-
-msgid "Title"
-msgstr "Title"
-
-msgid "Intro"
-msgstr "Intro"
-
-msgid "Body"
-msgstr "Body"
-
-msgid "Image url"
-msgstr "Image url"
-
-msgid "Publish date"
-msgstr "Publish date"
